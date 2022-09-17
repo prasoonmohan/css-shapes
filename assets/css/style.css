@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,400&display=swap");
+
+:root {
+  --body-color: black;
+  --container-color: #003865;
+  --text-color: white;
+  --shape-color: black;
+}
+
+body {
+  margin: 0;
+  background-color: var(--body-color);
+  height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+a:hover{
+    color: rgba(255, 255, 255, 0.779);
+}
+.container {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 25px;
+}
+.shape-container {
+  width: 300px;
+  height: 290px;
+  background-color: var(--container-color);
+  border-radius: 10%;
+  margin-left: 19px;
+}
+.shape-container:hover{
+    background-color: rgba(255, 255, 255, 0.492);
+
+}
+.shape-container > h1 {
+  text-align: center;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  font-size: 20px;
+}
+.shape-center {
+  margin-left: 80px;
+  margin-top: 30px;
+}
+
+/* triangle right */
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 80px solid transparent;
+  border-left: 150px solid var(--shape-color);
+  border-bottom: 80px solid transparent;
+}
+
+/* egg */
+.egg{
+    display: block;
+    width: 126px;
+    height: 180px;
+    background-color: var(--shape-color);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+/* infinity */
+.infinity{
+    position: relative;
+    width: 212px;
+    height: 100px;
+    box-sizing: content-box;
+}
+.infinity::before , 
+.infinity::after {
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 20px solid var(--shape-color);
+    border-radius: 50px 50px 0 50px;
+    transform: rotate(-45deg);
+}
+.infinity::after{
+    left: auto;
+    right: 0;
+    border-radius: 50px 50px 50px 0;
+    transform: rotate(45deg);
+}
+.infinity-center{
+    margin-top: 55px;
+    margin-left: 45px;
+}
+
+/* yin - yang */
+.yin-yang{
+    width: 96px;
+    box-sizing: content-box;
+    height: 48px;
+    background-color: var(--text-color);
+    border-color: var(--shape-color);
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+    position: relative;
+}
+.yin-yang::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: var(--text-color);
+    border: 18px solid var(--shape-color);
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+}
+.yin-yang::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--shape-color);
+    border: 18px solid var(--text-color);
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+}
+.yin-yang-center{
+    margin-top: 65px;
+    margin-left: 90px;
+}
+
+/* triangle-up */
+.triangle-up{
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 150px solid var(--shape-color);
+}
+.triangle-center{
+    margin-left: 65px;
+    margin-top: 35px;
+}
+
+/* oval */
+.oval{
+    height: 140px;
+    width: 230px;
+    background-color: var(--shape-color);
+    border-radius: 50%;
+}
+.oval-center{
+    margin-left: 35px;
+    margin-top: 45px;
+}
+
+/* diamond-narrow */
+.diamond-narrow{
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom: 70px solid var(--shape-color);
+    position: relative;
+    top: -50px;
+}
+.diamond-narrow::after{
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 70px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top: 70px solid var(--shape-color);
+}
+.diamond-center{
+    margin-top: 45px;
+    margin-left: 90px;
+}
+
+/* heart */
+.heart{
+    position: relative;
+    width: 100px;
+    height: 90px;
+    transform: rotate(-45deg);
+}
+.heart::before ,
+.heart::after {
+    position: absolute;
+    content: '';
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background-color: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(90px);
+    transform-origin: 0 100%;
+}
+.heart::after{
+    left: 0;
+    transform: rotate(90deg);
+    transform-origin: 100% 100%;
+}
+.heart-center{
+    margin-top: 80px;
+    margin-left: 65px;
+}
+
+
+/* footer */
+.main-container {
+  margin-bottom: 40px;
+}
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--container-color);
+  color: var(--container-color);
+
+}
+footer > span {
+  color: var(--text-color);
+}
